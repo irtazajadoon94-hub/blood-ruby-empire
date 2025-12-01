@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Ruby Empire - Mine Real Kashmir Rubies</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background: linear-gradient(135deg, #1a0000 0%, #4a0000 100%);
+            overflow: hidden;
+            color: white;
+        }
+        #gameCanvas { 
+            width: 100vw; 
+            height: 100vh; 
+            display: block; 
+            cursor: crosshair;
+        }
+        #hud {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ff0000;
+        }
+        #wallet-connect {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .btn {
+            background: linear-gradient(135deg, #ff0000, #8b0000);
+            border: none;
+            padding: 12px 24px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 20px #ff0000; }
+        #mining-stats {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .stat { margin: 5px 0; }
+        .ruby-count { color: #ff0000; font-size: 24px; font-weight: bold; }
+        #leaderboard {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 300px;
+        }
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading" class="loading">
+        <h1>🩸 BLOOD RUBY EMPIRE 🩸</h1>
+        <p>Loading Kashmir Valley...</p>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="hud" style="display:none;">
+        <h2>⛏️ Mining Dashboard</h2>
+        <div id="mining-stats">
+            <div class="stat">Rubies Mined: <span class="ruby-count" id="ruby-count">0</span></div>
+            <div class="stat">$BLOOD Tokens: <span id="blood-tokens">100</span></div>
+            <div class="stat">Mining Power: <span id="mining-power">1x</span></div>
+            <div class="stat">Land Owned: <span id="land-owned">0</span> parcels</div>
+        </div>
+        <button class="btn" onclick="upgradeTool()">⚒️ Upgrade Tool (50 $BLOOD)</button>
+    </div>
+
+    <div id="wallet-connect">
+        <button class="btn" id="connectBtn" onclick="connectWallet()">Connect Phantom Wallet</button>
+    </div>
+
+    <div id="leaderboard" style="display:none;">
+        <h3>🏆 Top Miners (Weekly)</h3>
+        <div id="leaderboard-list"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
