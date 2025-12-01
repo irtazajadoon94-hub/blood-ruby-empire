@@ -1,0 +1,52 @@
+{
+  "realRubies": [
+    {
+      "id": 1,
+      "url": "https://i.ibb.co/BKvLx8xW/ruby1.jpg",
+      "rarity": "legendary",
+      "description": "Pigeon Blood Ruby from Battakundi",
+      "redeemable": true
+    },
+    {
+      "id": 2,
+      "url": "https://i.ibb.co/rRQTsR4X/ruby2.jpg",
+      "rarity": "epic",
+      "description": "Deep Red Kashmir Ruby",
+      "redeemable": true
+    },
+    {
+      "id": 3,
+      "url": "https://i.ibb.co/QjqhmwRf/ruby3.jpg",
+      "rarity": "epic",
+      "description": "Natural Ruby Crystal",
+      "redeemable": true
+    },
+    {
+      "id": 4,
+      "url": "https://i.ibb.co/XkVvQwFX/ruby4.jpg",
+      "rarity": "rare",
+      "description": "Polished Kashmir Ruby",
+      "redeemable": true
+    },
+    {
+      "id": 5,
+      "url": "https://i.ibb.co/fdkJX8Jr/ruby5.jpg",
+      "rarity": "rare",
+      "description": "Raw Ruby Specimen",
+      "redeemable": true
+    },
+    {
+      "id": 6,
+      "url": "https://i.ibb.co/ZpV8sbLY/ruby6.jpg",
+      "rarity": "legendary",
+      "description": "Premium Pigeon Blood",
+      "redeemable": true
+    }
+  ],
+  "spawnRates": {
+    "legendary": 0.05,
+    "epic": 0.15,
+    "rare": 0.30,
+    "common": 0.50
+  }
+}
